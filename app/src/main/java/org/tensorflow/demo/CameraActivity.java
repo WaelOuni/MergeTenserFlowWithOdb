@@ -33,6 +33,7 @@ public class CameraActivity extends Activity {
 
   private static final String PERMISSION_CAMERA = Manifest.permission.CAMERA;
   private static final String PERMISSION_STORAGE = Manifest.permission.WRITE_EXTERNAL_STORAGE;
+  private static final String PERMISSION_GPS = Manifest.permission.ACCESS_FINE_LOCATION;
 
   @Override
   protected void onCreate(final Bundle savedInstanceState) {
@@ -76,10 +77,10 @@ public class CameraActivity extends Activity {
 
   private void requestPermission() {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-      if (shouldShowRequestPermissionRationale(PERMISSION_CAMERA) || shouldShowRequestPermissionRationale(PERMISSION_STORAGE)) {
-        Toast.makeText(CameraActivity.this, "Camera AND storage permission are required for this demo", Toast.LENGTH_LONG).show();
+      if (shouldShowRequestPermissionRationale(PERMISSION_CAMERA) || shouldShowRequestPermissionRationale(PERMISSION_STORAGE) || shouldShowRequestPermissionRationale(PERMISSION_GPS)) {
+        Toast.makeText(CameraActivity.this, "Camera, GPS AND storage permission are required for this demo", Toast.LENGTH_LONG).show();
       }
-      requestPermissions(new String[] {PERMISSION_CAMERA, PERMISSION_STORAGE}, PERMISSIONS_REQUEST);
+      requestPermissions(new String[] {PERMISSION_CAMERA, PERMISSION_STORAGE,PERMISSION_GPS}, PERMISSIONS_REQUEST);
     }
   }
 

@@ -30,18 +30,25 @@
         android:layout_alignParentBottom="true" />
 
     <!--<ImageButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="Take Picture"-->
-        <!--android:id="@+id/TakePicButton"-->
-        <!--android:background="@drawable/photo_camera"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--android:layout_alignParentBottom="true" />-->
-    
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Take Picture"-->
+    <!--android:id="@+id/TakePicButton"-->
+    <!--android:background="@drawable/photo_camera"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_alignParentBottom="true" />-->
+
+    <Button
+        android:id="@+id/obd_connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="ODB" />
+
     <org.tensorflow.demo.RecognitionScoreView
         android:id="@+id/results"
         android:layout_width="match_parent"
         android:layout_height="112dp"
-        android:layout_alignParentTop="true" />
-        
+        android:layout_below="@id/obd_connect" />
+
 </RelativeLayout>
